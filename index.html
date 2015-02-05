@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="alphabetGame">
+  <head>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="app.css" />
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body ng-controller="GameController as gameCtrl">
+    <div ng-click="gameCtrl.hideResponse()" ng-show="gameCtrl.incorrect" class="incorrect">
+      <h1 class="response">Try Again!</h1>
+    </div>
+    <div ng-click="gameCtrl.hideResponse()" ng-show="gameCtrl.correct" class="correct">
+      <h1 class="response">Good Job!</h1>
+    </div>
+    <div ng-click="gameCtrl.hideResponse()" ng-show="gameCtrl.stats" class="stats-page">
+      <div class="stats">
+        <h1 class="stats-title">Stats</h1>
+        <h4 class="stats-correct">Correct = {{gameCtrl.correctCount}}</h4>
+        <h4 class="stats-incorrect">Missed = {{gameCtrl.incorrectCount}}</h4>
+        <h3 class="stats-missed-title"> Missed: </h3>
+        <table class="stats">
+          <tr ng-repeat="(key, value) in gameCtrl.incorrectGuess | orderBy:key:reverse">
+            <td class="stats-missed-results"> {{key}}: {{ value }} time(s)</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-2"></div> 
+      <div class="col-sm-8">
+        <center><h1 class="letter"> {{gameCtrl.primary.sign }} is for ... </h1></center>
+      </div> 
+      <div class="col-sm-2">
+        <h5 class="alphabet">Animal Alphabet</h5>
+        <div ng-click="gameCtrl.showStats()" >
+          <img src="./img/stats_icon.png" class="stats-icon">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12" ng-repeat="letter in gameCtrl.letters" ng-click="gameCtrl.checkGuess(letter)">
+          <center ><h1 class="word">{{letter.word | uppercase}}</h1></center>
+          <div >
+            <img class="image"ng-src="{{letter.image}}" />
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

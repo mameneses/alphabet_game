@@ -1,0 +1,99 @@
+.image {
+  width:106%;
+  height:340px;
+}
+
+.word {
+  position:absolute;
+  top: 45%;
+  color: white;
+  background-color:rgba(0,0,0,0.75);
+  width:100%;
+  font-size: 80px;
+}
+
+.letter {
+  font-size: 68px;
+}
+
+.incorrect {
+  position:fixed;
+  z-index: 1;
+  margin:0;
+  min-height: 100%;
+  min-width:100%;
+  background-color:rgba(255,0,0,0.70);
+}
+
+.correct {
+  position:fixed;
+  z-index: 1;
+  margin:0;
+  min-height: 100%;
+  min-width:100%;
+  background-color:rgba(0,255,0,0.70);
+}
+
+.alphabet {
+  float:right;
+}
+
+.stats-page {
+  position:fixed;
+  z-index: 1;
+  margin:0;
+  min-height: 100%;
+  min-width:100%;
+  background-color:rgba(0,0,0,0.80);
+}
+
+.stats {
+  color: white;
+  width:50%;
+  margin:0 auto;
+}
+
+.stats-icon {
+  height: 40px;
+  float: right;
+}
+
+.stats-title {
+  font-size: 120px;
+  width:50%;  
+  margin: 0 auto;
+}
+
+.stats-correct {
+  color: green;
+  font-size: 40px;
+  width:50%;
+  margin: 0 auto;
+}
+
+.stats-incorrect{
+  color: red;
+  font-size: 40px;
+  width:50%;
+  margin: 0 auto;
+}
+
+.stats-missed-title{
+  font-size: 60px;
+  width:50%;
+  margin: 0 auto;
+}
+
+.stats-missed-results{
+  font-size: 30px;
+  width:50%;
+  margin: 0 auto;
+}
+
+.response {
+  position:absolute;
+  top:25%;
+  font-size:200px;
+  color:white;
+  left:5%;
+}
