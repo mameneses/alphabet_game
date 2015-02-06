@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-6 col-xs-12" ng-repeat="letter in gameCtrl.letters" ng-click="gameCtrl.checkGuess(letter)">
+      <div class="col-sm-6 col-xs-12 tile" ng-repeat="letter in gameCtrl.letters" ng-click="gameCtrl.checkGuess(letter)">
           <center ><h1 class="word">{{letter.word | uppercase}}</h1></center>
           <div >
             <img class="image"ng-src="{{letter.image}}" />

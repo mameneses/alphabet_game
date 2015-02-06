@@ -102,3 +102,23 @@
   color:white;
   left:5%;
 }
+
+.tile:hover {
+  cursor: pointer;
+}
+
+.stats-icon:hover{
+  cursor: pointer;
+}
+
+.stats-page:hover{
+  cursor: pointer;
+}
+
+.incorrect:hover{
+  cursor: pointer;
+}
+
+.correct:hover{
+  cursor: pointer;
+}
