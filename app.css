@@ -36,6 +36,9 @@
 
 .alphabet {
   float:right;
+  clear: both;
+  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .stats-page {
@@ -56,6 +59,8 @@
 .stats-icon {
   height: 40px;
   float: right;
+  clear: both;
+  margin-right: 10px;
 }
 
 .stats-title {
